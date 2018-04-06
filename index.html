@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<span id="log"></span>
+	<div class="wrapper">
+
+		<div class="room" id="room">
+			<div class="room__side  room__side--front">
+				<img src="src/3.jpg" alt="" class="room__img">
+			</div>
+			<div class="room__side  room__side--left">
+				<img src="src/3.jpg" alt="" class="room__img">
+			</div>
+			<div class="room__side  room__side--right">
+				<img src="src/3.jpg" alt="" class="room__img">
+			</div>
+			<div class="room__side  room__side--top"></div>
+			<div class="room__side  room__side--bottom"></div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$(document).mousemove(function(event){
+				$('#room').css({
+					'transform':'rotateX('+(((0.016*event.pageY) -5)*-1)+'deg) rotateY('+((0.007*event.pageX) -5 )+'deg)'
+				});
+			});
+		})
+		
+
+	</script>
+</body>
+</html>
